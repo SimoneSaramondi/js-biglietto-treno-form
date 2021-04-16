@@ -13,6 +13,7 @@ div{
 .text-align-centre{
     text-align: center;
 }
+.dati-biglietto,
 .dati-persona{
     background-color: white;
     height: 200px;
@@ -48,4 +49,17 @@ button{
 }
 button:hover{
     border-color: rgb(219, 52, 94) ;
+}
+.fascia-biglietto{
+    border: 1px solid;
+    margin: 0px 10px;
+    height: 140px;
+}
+.slot{
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+#dati-passeggero{
+    background-color: lightgrey;
 }
