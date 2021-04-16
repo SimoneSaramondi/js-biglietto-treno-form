@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+body{
+    background-color: rgb(219, 52, 94);
+}
+div{
+    padding: 10px;
+}
+.text-align-centre{
+    text-align: center;
+}
+.dati-persona{
+    background-color: white;
+    height: 200px;
+    width: 80%;
+    margin: auto;
+    border-radius: 8px;
+}
+.informazioni{
+    width: 33.3%;
+    float: left;
+    height: 100px;
+}
+.informazioni span{
+    color: rgb(219, 52, 94);
+}
+.informazioni input{
+    margin: 10px;
+    height: 25px;
+}
+.bottone{
+    width: 50%;
+    float: left;
+}
+.bottone-sinistra{
+    position: relative;
+    left: 40%;
+}
+button{
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid lightgray;
+}
+button:hover{
+    border-color: rgb(219, 52, 94) ;
+}
