@@ -45,7 +45,12 @@ document.getElementById("codice-treno").innerHTML = "Cod: " + codiceTreno;
 var nomeCognome = prompt("Nome e Cognome");
 console.log(nomeCognome);
 
+document.getElementById("nomeECognome").innerHTML = nomeCognome;
+
 var km = parseInt(prompt("Km da percorrere"));
 console.log(km);
+document.getElementById("distanza").innerHTML = km;
+
 var fasciaEta = prompt("Junior (<18), Senior (18-65), Over(>65)");
 console.log(fasciaEta);
+document.getElementById("fasciaEta").innerHTML = fasciaEta;
