@@ -14,32 +14,36 @@
             <div class="dati-persona">
                 <div class="informazioni text-align-centre">
                     <span><b>Nome e Cognome</b></span>
-                    <!-- <input type="text"  name="Nome e Cognome" placeholder="Nome e Cognome" id="nomeECognome"> -->
-                    <!-- <div class="contenitore" id="nomeECognome">Nome e Cognome</div> -->
-                    <input type="text" id="nomeUtente" placeholder="Nome e Cognome">
+                    <div>
+                        <input type="text" id="nomeUtente" placeholder="Nome e Cognome" class="text-align-centre">
+                    </div>                    
                 </div>
                 <div class="informazioni text-align-centre">
                     <span><b> Km da percorrere</b></span>
-                    <!-- <input type="text"  name="Km da percorrere" placeholder="Km"> -->
-                    <!-- <div class="contenitore" id="distanza">Km da percorrere</div> -->
-                    <input type="text" id="kmTragitto" placeholder="Km da percorrere">
+                    <div>
+                        <input type="text" id="kmTragitto" placeholder="Km da percorrere" class="text-align-centre">
+                    </div>                    
                 </div>
                 <div class="informazioni text-align-centre">
                     <span><b>Fascia d'età</b></span>
-                    <!-- <input type="text"  name="Fascia d'età" placeholder="Fascia d'età"> -->
-                    <!-- <div class="contenitore" id="fasciaEta">Fascia d'età</div> -->
-                    <select name="" id="fasciaEta">
-                        <option value="minorenne">Minorenne</option>
-                        <option value="maggiorenne">Maggiorenne</option>
-                        <option value="over">Over 65</option>
-                    </select>
+                    <div>
+                        <select name="" id="fasciaEta">
+                            <option value="minorenne">Minorenne</option>
+                            <option value="maggiorenne">Maggiorenne</option>
+                            <option value="over">Over 65</option>
+                        </select>
+                    </div>
+                    
                 </div>
-                <div class="bottone bottone-sinistra">
-                    <button>Genera</button>
+                <div class="bottoni">
+                    <div class="bottone bottone-sinistra" id="genera">
+                        <button>Genera</button>
+                    </div>
+                    <div class="bottone" id="annulla">
+                       <button>Annulla</button>
+                    </div>
                 </div>
-                <div class="bottone">
-                    <button>Annulla</button>
-                </div>
+                
             </div>
         </div>
     </header>
@@ -50,10 +54,10 @@
             <div class="dati-biglietto">
                 <div>DETTAGLIO PASSEGGERO</div>
                 <div class="fascia-biglietto">
-                    <div class="slot" id="dati-passeggero"><b>Nome passeggero</b></div>
+                    <div class="slot datiPasseggero" ><b id="datiPasseggero">Nome passeggero</b></div>
                     <div class="slot">
                         <div><b>Offerta</b></div>
-                        <div>Sconto</div>
+                        <div id="sconto">Sconto</div>
                     </div>
                     <div class="slot">
                         <div><b>Carrozza</b></div>
@@ -65,7 +69,7 @@
                     </div>
                     <div class="slot">
                         <div><b>Costo biglietto</b></div>
-                        <div>Costo</div>
+                        <div id="costoBiglietto">Costo</div>
                     </div>
                 </div>
             </div>

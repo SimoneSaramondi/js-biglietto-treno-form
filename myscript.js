@@ -1,32 +1,3 @@
-/*
-var chilometriDaPercorrere = parseInt(prompt("Quanti chilometri devi percorrere?"));
-console.log(chilometriDaPercorrere);
-
-var eta = parseInt(prompt("Inserisci la tua età"));
-console.log(eta);
-
-var bigliettoAlChilometro = 0.21;
-
-var scontoMinorenni = 0.2;
-
-var scontoAnziani = 0.4;
-
-var costoViaggio = bigliettoAlChilometro * chilometriDaPercorrere;
-
-var costoViaggioMinorenni = costoViaggio * scontoMinorenni;
-
-var costoViaggioAnziani = costoViaggio * scontoAnziani;
-
-if(Number.isNaN(chilometriDaPercorrere) || Number.isNaN(eta)){
-    console.log("Dati inseriti non validi");
-} else if(eta >= 18 && eta <= 65){
-    console.log("Il prezzo del biglietto è di " + costoViaggio + " Euro");
-} else if(eta < 18){
-    console.log("Il prezzo del biglietto è di " + costoViaggioMinorenni.toFixed(2) + " Euro");
-} else {
-    console.log("Il prezzo del biglietto è di " + costoViaggioAnziani.toFixed(2) + " Euro");
-}*/
-
 // FUNZIONI:
 // FUNZIONE NUMERO CASUALE
 function numeroRandom(primo, ultimo){
@@ -41,16 +12,60 @@ document.getElementById("numero-carrozza").innerHTML = "Numero: " + numeroCarroz
 var codiceTreno = numeroRandom(100000,90000);
 document.getElementById("codice-treno").innerHTML = "Cod: " + codiceTreno;
 
+
+//BOTTONE GENERA BIGLIETTO  
+var buttoneGenera = document.getElementById('genera');
+buttoneGenera.addEventListener( 'click', //Al click del bottone genera il biglietto
+function() {
+
 //RICHIESTA DATI
-var nomeCognome = prompt("Nome e Cognome");
-console.log(nomeCognome);
+  var inputNome = document.getElementById("nomeUtente");
+  var nomeUtente = inputNome.value;
+  console.log(nomeUtente);
 
-document.getElementById("nomeECognome").innerHTML = nomeCognome;
+  var inputKm = document.getElementById("kmTragitto");
+  var percorrenza = parseInt(inputKm.value);
+  console.log(percorrenza);
 
-var km = parseInt(prompt("Km da percorrere"));
-console.log(km);
-document.getElementById("distanza").innerHTML = km;
+  var inputEta = document.getElementById("fasciaEta");
+  var eta = inputEta.value;
+  console.log(eta);
 
-var fasciaEta = prompt("Junior (<18), Senior (18-65), Over(>65)");
-console.log(fasciaEta);
-document.getElementById("fasciaEta").innerHTML = fasciaEta;
+  var prezzoAlKilometro = 0.21;
+  var prezzoBigliettoNormale = prezzoAlKilometro * percorrenza;
+  console.log(prezzoBigliettoNormale);
+
+  var sconto = "Tariffa Default"
+
+  if (eta == "minorenne") {
+   ((prezzoBigliettoNormale / 100) * 80);
+   sconto = "Sconto Minorenne";
+  } else if (eta == "over65") {
+   ((prezzoBigliettoNormale / 100) * 60);
+   sconto = "Sconto Maggiorenne";
+  } else {
+   (prezzoBigliettoNormale);
+  }
+
+  document.getElementById("sconto").innerHTML = sconto;
+  document.getElementById("costoBiglietto").innerHTML = prezzoBigliettoNormale.toFixed(2);
+  document.getElementById("datiPasseggero").innerHTML = "Nome e Cognome: " + nomeUtente;
+
+ }
+);
+
+var buttoneAnnulla = document.getElementById("annulla");
+buttoneAnnulla.addEventListener( 'click', // Al click del bottone si la scheda
+  function() {
+
+    document.getElementById("datiPasseggero").innerHTML = "";
+    document.getElementById("sconto").innerHTML = '';
+    document.getElementById("costoBiglietto").innerHTML = "";
+    document.getElementById("numero-carrozza").innerHTML = "";
+    document.getElementById("codice-treno").innerHTML = "";
+
+    document.getElementById("kmTragitto").value = "";
+    document.getElementById("fasciaEta").value = "";
+    document.getElementById("nomeUtente").value = "";
+  }
+);
