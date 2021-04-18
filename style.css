@@ -63,9 +63,13 @@ button:hover{
 #dati-passeggero{
     background-color: lightgrey;
 }
+select{
+    font-size: medium;
+/*
 .contenitore{
     border: 1px solid;
     margin-top: 5px;
     padding: 10px;
     border-radius: 5px;
 }
+*/
