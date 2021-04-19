@@ -54,12 +54,13 @@ function() {
  }
 );
 
+//BOTTONE ANNULLA BIGLIETTO
 var buttoneAnnulla = document.getElementById("annulla");
 buttoneAnnulla.addEventListener( 'click', // Al click del bottone si la scheda
   function() {
 
     document.getElementById("datiPasseggero").innerHTML = "";
-    document.getElementById("sconto").innerHTML = '';
+    document.getElementById("sconto").innerHTML = "";
     document.getElementById("costoBiglietto").innerHTML = "";
     document.getElementById("numero-carrozza").innerHTML = "";
     document.getElementById("codice-treno").innerHTML = "";
